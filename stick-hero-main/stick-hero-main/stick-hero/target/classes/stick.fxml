@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" onKeyPressed="#flipMario" onMousePressed="#game" onMouseReleased="#stopLengthening" prefHeight="567.0" prefWidth="1240.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.stick.Controller">
+   <ImageView fitHeight="565.0" fitWidth="1237.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true">
+      <Image url="@1847.jpg" />
+   </ImageView>
+   <ImageView fx:id="mario" fitHeight="93.0" fitWidth="50.0" layoutX="17.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@mario.png" />
+   </ImageView>
+   <Label fx:id="score" layoutX="588.0" layoutY="8.0" prefHeight="66.0" prefWidth="344.0" text="0">
+      <font>
+         <Font name="Sana Regular" size="41.0" />
+      </font>
+   </Label>
+   <Rectangle fx:id="stick" arcHeight="5.0" arcWidth="5.0" fill="#000000" height="31.0" layoutX="77.0" layoutY="275.0" stroke="BLACK" strokeType="INSIDE" width="6.0" />
+   <Rectangle fx:id="secondRect" arcHeight="5.0" arcWidth="5.0" height="262.0" layoutX="218.0" layoutY="305.0" stroke="BLACK" strokeType="INSIDE" width="80.0" />
+   <Rectangle fx:id="startRect" arcHeight="5.0" arcWidth="5.0" height="262.0" layoutY="305.0" stroke="BLACK" strokeType="INSIDE" width="80.0" />
+   <Label layoutX="462.0" layoutY="20.0" prefHeight="54.0" prefWidth="126.0" text="SCORE : ">
+      <font>
+         <Font name="Mukta Malar Bold" size="32.0" />
+      </font>
+      <textFill>
+         <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="0.6389548693586699" startY="0.42755344418052255">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color opacity="0.11472275108098984" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
+   </Label>
+   <Button layoutX="423.0" layoutY="66.0" mnemonicParsing="false" onAction="#replay" prefHeight="31.0" prefWidth="80.0" text="Replay" />
+   <Button layoutX="592.0" layoutY="69.0" mnemonicParsing="false" onAction="#quit" prefHeight="26.0" prefWidth="68.0" text="QUIT" />
+   <ImageView fitHeight="26.0" fitWidth="39.0" layoutX="153.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@cherries.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="26.0" fitWidth="39.0" layoutX="512.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@cherries.png" />
+      </image>
+   </ImageView>
+   <Button fx:id="pause" layoutX="506.0" layoutY="108.0" mnemonicParsing="false" onAction="#pause" prefHeight="26.0" prefWidth="86.0" text="Pause" />
+</AnchorPane>
